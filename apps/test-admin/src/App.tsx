@@ -9,6 +9,14 @@ import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
 import { UserShow } from "./user/UserShow";
+import { DocumentList } from "./document/DocumentList";
+import { DocumentCreate } from "./document/DocumentCreate";
+import { DocumentEdit } from "./document/DocumentEdit";
+import { DocumentShow } from "./document/DocumentShow";
+import { BulletList } from "./bullet/BulletList";
+import { BulletCreate } from "./bullet/BulletCreate";
+import { BulletEdit } from "./bullet/BulletEdit";
+import { BulletShow } from "./bullet/BulletShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -41,6 +49,20 @@ const App = (): React.ReactElement => {
           edit={UserEdit}
           create={UserCreate}
           show={UserShow}
+        />
+        <Resource
+          name="Document"
+          list={DocumentList}
+          edit={DocumentEdit}
+          create={DocumentCreate}
+          show={DocumentShow}
+        />
+        <Resource
+          name="Bullet"
+          list={BulletList}
+          edit={BulletEdit}
+          create={BulletCreate}
+          show={BulletShow}
         />
       </Admin>
     </div>

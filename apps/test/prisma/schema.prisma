@@ -17,3 +17,19 @@ model User {
   updatedAt DateTime @updatedAt
   username  String   @unique
 }
+
+model Document {
+  children  String?
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  shared    Boolean?
+  updatedAt DateTime @updatedAt
+}
+
+model Bullet {
+  children  String?
+  content   String?
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
